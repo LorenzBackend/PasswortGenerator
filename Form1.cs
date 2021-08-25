@@ -19,14 +19,14 @@ namespace PasswortGenerator {
         }
 
         private string generatePass() {
-            string RoomID = "";
+            string Password = "";
             string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkömnopqrstuvw!$&(/&%$=?(%&%@=/";
             Random r = new Random();
             for (int i = 0; i < 40; i++) {
                 int randomCode = r.Next(0, characters.Length);
-                RoomID = RoomID + characters[randomCode];
+                Password = Password + characters[randomCode];
             }
-            return RoomID;
+            return Password;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e) {
